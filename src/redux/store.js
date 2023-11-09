@@ -3,6 +3,8 @@ import thunk from 'redux-thunk';
 import initialState from './initialState';
 import tablesRedux from './tablesRedux';
 
+import allTables from './allTablesRedux';
+
 const subreducers = {
    tables: tablesRedux,
 
