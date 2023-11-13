@@ -24,7 +24,7 @@ const Table = () => {
         fetch("http://localhost:3131/api/tables/"+ table.id,{
             method: 'PATCH',
             headers: {
-                contentType: 'application/json'
+                "Content-Type": "application/json",
             },
             body: JSON.stringify({status, peopleAmount, maxPeopleAmount,bill})
         })

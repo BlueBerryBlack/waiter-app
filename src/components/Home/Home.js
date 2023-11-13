@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import Buttons from "../Buttons/Buttons";
 import { Link } from "react-router-dom";
+import styles from "./Home.module.scss";
 
 
 const Home = () => {
@@ -16,8 +17,9 @@ const Home = () => {
                     <h2>Table {table.id}</h2>
                     <p>status: {table.status}</p>
                 </Link>
-
-            ))}
+            )
+            )
+            }
             
             <Buttons>Show more</Buttons>
         </div>
