@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateTable } from "../../redux/tablesRedux";
-
+import { ApiURL } from "../../config";
 
 const Table = () => {
     const tableId = useParams().tableId;
@@ -21,7 +21,7 @@ const Table = () => {
 
     const allSubmit =(e) => {
         e.preventDefault();
-        fetch("http://localhost:3131/api/tables/"+ table.id,{
+        fetch(ApiURL+"/tables/"+ table.id,{
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",

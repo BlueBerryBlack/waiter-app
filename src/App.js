@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { ALL_TABLES, allTables } from './redux/tablesRedux';
+import { ApiURL } from './config';
 
 const App = () => {
 
@@ -15,7 +16,7 @@ const App = () => {
 
   useEffect (()=>{
 
-    fetch("http://localhost:3131/api/tables")
+    fetch(ApiURL+"/tables")
     .then((res)=>res.json())
     .then((res)=>{
     dispatch(allTables(res))
